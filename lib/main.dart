@@ -43,17 +43,13 @@ class _DicePageState extends State<DicePage> {
         onTap: () {
           if (diceType == DiceType.FirstDice) {
             setState(() {
-              do {
-                print('1');
-                _firstDiceNumber = Random().nextInt(6);
-              } while (_firstDiceNumber == 0);
+               _firstDiceNumber = Random().nextInt(6)+1;
             });
+            
+            
           } else {
-            setState(() {
-              do {
-                print('2');
-                _secondDiceNumber = Random().nextInt(6);
-              } while (_secondDiceNumber == 0);
+           setState(() {
+               _secondDiceNumber = Random().nextInt(6)+1;
             });
           }
         },
