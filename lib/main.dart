@@ -44,13 +44,12 @@ class _DicePageState extends State<DicePage> {
           if (diceType == DiceType.FirstDice) {
             setState(() {
                _firstDiceNumber = Random().nextInt(6)+1;
+               _secondDiceNumber = Random().nextInt(6)+1;
             });
             
             
           } else {
-           setState(() {
-               _secondDiceNumber = Random().nextInt(6)+1;
-            });
+           
           }
         },
       ),
